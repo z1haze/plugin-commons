@@ -40,6 +40,10 @@ public class ChatUtils {
         }
     }
 
+    public static void sendPrefixed(CommandSender sender, String message) {
+        sendColorized(sender, prefix + " " + message);
+    }
+
     public static void sendColorized(CommandSender sender, String message) {
         if (message != null) {
             sender.sendMessage(colorize(message));
